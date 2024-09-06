@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="cssConfig.css" />
+    <title>Configurações do Perfil</title>
+  </head>
+  <body>
+    <header class="top-area">
+      <div id="icones-topo-esquerda">
+        <span>LOGO</span>
+      </div>
+      <div id="icones-topo-direita">
+        <img src="assets/Shape.png" id="saída" />
+        <img src="assets/Ellipse 13.png" id="foto-user" />
+      </div>
+    </header>
+    <section class="mid-area">
+      <div id="meio-um">
+        <div id="area-perfil">
+          <div id="texto-foto-perfil">
+            <p id="foto-perfil-descricao">
+              Sua foto de perfil aparecerá em todas as partidas que<br />você
+              participar.
+            </p>
+          </div>
+          <div id="circulo-perfil">
+            <!--<span id="texto-foto">Foto de perfil</span>-->
+          </div>
+          <div id="icon-camera"></div>
+          <div id="texto-visualização">
+            <p id="texto-pre-visu">Pré-visualização da imagem de perfil.</p>
+          </div>
+        </div>
+      </div>
+      <div id="meio-dois">
+        <div id="area-dados">
+          <div id="info-perfil">
+            <p id="texto-info">Configuração do Perfil</p>
+          </div>
+          <div id="area-form">
+            <form id="dados-form">
+              <label for="nome" class="label-form">Nome</label>
+              <input type="text" id="nome" name="nome" class="caixa-form" />
+              <label for="email" class="label-form">Email</label>
+              <input type="email" id="email" name="email" class="caixa-form" />
+              <label for="data" class="label-form">Data de nascimento</label>
+              <input type="date" id="data" name="data" class="caixa-form" />
+              <label for="pwd" class="label-form">Senha</label>
+              <input type="password" id="pwd" name="pwd" class="caixa-form" />
+            </form>
+          </div>
+          <div id="area-excluir">
+            <button type="submit" id="botao-excluir">
+              <p id="texto-excluir">Excluir conta</p>
+            </button>
+            <div id="area-texto-excluir">
+              <p id="alerta-excluir">
+                Uma vez excluída, sua conta será perdida
+                <span id="texto-perma">permanentemente</span> sem opção de
+                recuperação.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- colocar coisas -->
+      </div>
+    </section>
+    <section class="bottom-area">
+      <button type="submit" id="caixa-alterar">Confirmar</button>
+    </section>
+  </body>
+</html>
