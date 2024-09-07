@@ -226,7 +226,7 @@ body {
   width: 100%;
 }
 
-#botao-excluir {
+.botao-excluir {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -293,4 +293,72 @@ body {
   font-weight: 600;
   text-align: center;
   color: white;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(253, 253, 253);
+  width: 20%;
+  height: 25%;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 15%;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+  padding: 20px;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.buttons {
+  display: flex;
+  width: 100%;
+  height: 30%;
+}
+
+#cancelar-button {
+  background-color: #717171;
+  border-bottom-left-radius: 10px;
+}
+
+#excluir-button {
+  background-color: #a3a3a3;
+  border-bottom-right-radius: 10px;
+}
+
+.buttons button {
+  border: none;
+  width: 50%;
+  color: white;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+#text-nao {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
 }

@@ -52,7 +52,7 @@
             </form>
           </div>
           <div id="area-excluir">
-            <button type="submit" id="botao-excluir">
+            <button type="submit" class="botao-excluir">
               <p id="texto-excluir">Excluir conta</p>
             </button>
             <div id="area-texto-excluir">
@@ -70,5 +70,20 @@
     <section class="bottom-area">
       <button type="submit" id="caixa-alterar">Confirmar</button>
     </section>
+    <div class="modal">
+      <div class="container">
+        <div class="content">
+          <p>
+            Tem certeza que deseja excluir sua conta? Ela
+            <span id="text-nao">NÃO</span> poderá ser recuperada.
+          </p>
+        </div>
+        <div class="buttons">
+          <button id="cancelar-button">Cancelar</button>
+          <button id="excluir-button">Excluir conta</button>
+        </div>
+      </div>
+    </div>
+    <script src="configJS.js"></script>
   </body>
 </html>
