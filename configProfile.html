@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="cssConfig.css" />
     <title>Configurações do Perfil</title>
   </head>
@@ -12,7 +16,7 @@
         <span>LOGO</span>
       </div>
       <div id="icones-topo-direita">
-        <img src="assets/Shape.png" id="saída" />
+        <span class="material-icons" id="saída">logout</span>
         <img src="assets/Ellipse 13.png" id="foto-user" />
       </div>
     </header>
@@ -25,10 +29,12 @@
               participar.
             </p>
           </div>
-          <div id="circulo-perfil">
-            <!--<span id="texto-foto">Foto de perfil</span>-->
+          <div class="area-circulo">
+            <div class="circulo-perfil">
+            </div>
+            <i class="material-icons">photo_camera</i>
           </div>
-          <div id="icon-camera"></div>
+
           <div id="texto-visualização">
             <p id="texto-pre-visu">Pré-visualização da imagem de perfil.</p>
           </div>
@@ -41,26 +47,42 @@
           </div>
           <div id="area-form">
             <form id="dados-form">
-              <label for="nome" class="label-form">Nome</label>
-              <input
-                type="text"
-                id="sobrenome"
-                name="sobrenome"
-                class="caixa-form"
-              />
-              <label for="nome" class="label-form">Sobrenome</label>
-              <input
-                type="text"
-                id="sobrenome"
-                name="sobreome"
-                class="caixa-form"
-              />
-              <label for="email" class="label-form">Email</label>
-              <input type="email" id="email" name="email" class="caixa-form" />
-              <label for="data" class="label-form">Data de nascimento</label>
-              <input type="date" id="data" name="data" class="caixa-form" />
-              <label for="pwd" class="label-form">Senha</label>
-              <input type="password" id="pwd" name="pwd" class="caixa-form" />
+              <div class="input-box">
+                <label for="nome" class="label-form">Nome</label>
+                <input
+                  type="text"
+                  id="sobrenome"
+                  name="sobrenome"
+                  class="caixa-form"
+                />
+              </div>
+              <div class="input-box">
+                <label for="nome" class="label-form">Sobrenome</label>
+                <input
+                  type="text"
+                  id="sobrenome"
+                  name="sobreome"
+                  class="caixa-form"
+                />
+              </div>
+              <div class="input-box">
+                <label for="email" class="label-form">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="caixa-form"
+                />
+              </div>
+              <div class="input-box">
+                <label for="data" class="label-form">Data de nascimento</label>
+                <input type="date" id="data" name="data" class="caixa-form" />
+              </div>
+              <div class="input-box">
+                <label for="pwd" class="label-form">Senha</label>
+                <input type="password" id="pwd" name="pwd" class="caixa-form" />
+                <i class="material-icons">visibility</i>
+              </div>
             </form>
           </div>
           <div id="area-excluir">
