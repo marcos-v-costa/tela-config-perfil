@@ -172,7 +172,7 @@ body {
   flex-direction: column;
   height: 100%;
   width: 100%;
-  gap: 10px;
+  gap: 6px;
 }
 
 #info-perfil {
@@ -206,9 +206,12 @@ body {
 }
 
 .input-box {
+  display: flex;
+  flex-direction: column;
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   width: 100%;
+  gap: 4px;
 }
 
 .input-box input {
