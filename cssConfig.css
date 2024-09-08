@@ -123,7 +123,7 @@ body {
   position: relative;
 }
 
-.area-circulo i {
+.area-circulo img {
   position: absolute;
   right: 25%;
   top: 80%;
@@ -266,9 +266,6 @@ body {
   padding: 15px;
   cursor: pointer;
   border: none;
-}
-
-#texto-excluir {
   font-family: "Montserrat";
   font-weight: 600;
   color: white;
@@ -304,8 +301,7 @@ body {
   height: 15%;
 }
 
-#caixa-alterar {
-  align-items: center;
+.bottom-area button {
   background-color: rgb(113, 113, 113);
   height: 75%;
   width: 15%;

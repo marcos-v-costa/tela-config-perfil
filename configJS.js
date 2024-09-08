@@ -17,3 +17,18 @@ window.onclick = function (event) {
     switchModal();
   }
 };
+
+const iconButton = document.querySelector("#iconOlho");
+const typePass = document.querySelector("#password");
+
+iconButton.addEventListener("click", olhoSenha);
+
+function olhoSenha() {
+  if (typePass.type === "password") {
+    typePass.setAttribute("type", "text");
+    iconButton.classList.replace("bi-eye-fill", "bi-eye-slash-fill");
+  } else if (typePass.type === "text") {
+    typePass.setAttribute("type", "password");
+    iconButton.classList.replace("bi-eye-slash-fill", "bi-eye-fill");
+  }
+}

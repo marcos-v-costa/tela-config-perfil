@@ -4,19 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <link rel="stylesheet" href="cssConfig.css" />
     <title>Configurações do Perfil</title>
   </head>
+
   <body>
     <header class="top-area">
       <div id="icones-topo-esquerda">
         <span>LOGO</span>
       </div>
       <div id="icones-topo-direita">
-        <span class="material-icons" id="saída">logout</span>
+        <img src="/assets/logout.svg" id="saída" />
         <img src="assets/Ellipse 13.png" id="foto-user" />
       </div>
     </header>
@@ -30,9 +31,8 @@
             </p>
           </div>
           <div class="area-circulo">
-            <div class="circulo-perfil">
-            </div>
-            <i class="material-icons">photo_camera</i>
+            <div class="circulo-perfil"></div>
+            <img src="/assets/photo_camera.svg" />
           </div>
 
           <div id="texto-visualização">
@@ -79,16 +79,14 @@
                 <input type="date" id="data" name="data" class="caixa-form" />
               </div>
               <div class="input-box">
-                <label for="pwd" class="label-form">Senha</label>
-                <input type="password" id="pwd" name="pwd" class="caixa-form" />
-                <i class="material-icons">visibility</i>
+                <label for="password" class="label-form">Senha</label>
+                <input type="password" id="password" name="password" class="caixa-form" />
+                <i class="bi bi-eye-fill" id="iconOlho"></i>
               </div>
             </form>
           </div>
           <div id="area-excluir">
-            <button type="submit" class="botao-excluir">
-              <p id="texto-excluir">Excluir conta</p>
-            </button>
+            <button type="submit" class="botao-excluir">Excluir conta</button>
             <div id="area-texto-excluir">
               <p id="alerta-excluir">
                 Uma vez excluída, sua conta será perdida
@@ -102,7 +100,7 @@
       </div>
     </section>
     <section class="bottom-area">
-      <button type="submit" id="caixa-alterar">Confirmar</button>
+      <button type="submit">Confirmar</button>
     </section>
     <div class="modal">
       <div class="container">
