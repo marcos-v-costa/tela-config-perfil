@@ -18,7 +18,7 @@
       </div>
       <div id="icones-topo-direita">
         <img src="/assets/logout.svg" id="saída" />
-        <img src="assets/Ellipse 13.png" id="foto-user" />
+        <i class="bi bi-person-circle" id="foto-user"></i>
       </div>
     </header>
     <section class="mid-area">
@@ -31,8 +31,10 @@
             </p>
           </div>
           <div class="area-circulo">
-            <div class="circulo-perfil"></div>
-            <img src="/assets/photo_camera.svg" />
+            <div class="circulo-perfil">
+              <img src="/assets/photo_camera.svg" />
+            </div>
+            
           </div>
 
           <div id="texto-visualização">
@@ -106,7 +108,7 @@
       </div>
     </section>
     <section class="bottom-area">
-      <button type="submit">Confirmar</button>
+      <button type="submit" class="botao-confirmar">Confirmar</button>
     </section>
     <div class="modal">
       <div class="container">
@@ -119,6 +121,14 @@
         <div class="buttons">
           <button id="cancelar-button">Cancelar</button>
           <button id="excluir-button">Excluir conta</button>
+        </div>
+      </div>
+    </div>
+    <div class="modalConfirmar">
+      <div class="containerConfirmar">
+        <i class="bi bi-x"></i>
+        <div class="contentConfirmar">
+          <p>Informações salvas <br />com sucesso!</p>
         </div>
       </div>
     </div>

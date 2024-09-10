@@ -1,4 +1,4 @@
-const switchModal = () => {
+function switchModal() {
   const modal = document.querySelector(".modal");
   const actualStyle = modal.style.display;
   if (actualStyle == "block") {
@@ -6,7 +6,7 @@ const switchModal = () => {
   } else {
     modal.style.display = "block";
   }
-};
+}
 
 const btn = document.querySelector(".botao-excluir");
 btn.addEventListener("click", switchModal);
@@ -32,3 +32,23 @@ function olhoSenha() {
     iconButton.classList.replace("bi-eye-slash-fill", "bi-eye-fill");
   }
 }
+
+const switchModalConfirmar = () => {
+  const modalConfirmar = document.querySelector(".modalConfirmar");
+  const actualStyleConfirmar = modalConfirmar.style.display;
+  if (actualStyleConfirmar == "block") {
+    modalConfirmar.style.display = "none";
+  } else {
+    modalConfirmar.style.display = "block";
+  }
+};
+
+const btnConfirmar = document.querySelector(".botao-confirmar");
+btnConfirmar.addEventListener("click", switchModalConfirmar);
+
+window.onclick = function (event) {
+  const modalConfirmar = document.querySelector(".modalConfirmar");
+  if (event.target == modalConfirmar) {
+    switchModalConfirmar();
+  }
+};

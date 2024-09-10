@@ -59,8 +59,10 @@ body {
 }
 
 #foto-user {
-  height: 5.5rem;
+  font-size: 3.5rem;
+  height: 3.6rem;
   cursor: pointer;
+  color: #3a3a3a;
 }
 
 .mid-area {
@@ -123,9 +125,9 @@ body {
   position: relative;
 }
 
-.area-circulo img {
+.circulo-perfil img {
   position: absolute;
-  right: 25%;
+  right: 10%;
   top: 80%;
   font-size: 24px;
   background-color: #000000;
@@ -382,4 +384,49 @@ body {
   font-family: Montserrat;
   font-size: 14px;
   font-weight: 700;
+}
+
+.modalConfirmar {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.containerConfirmar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(253, 253, 253);
+  width: 20%;
+  height: 20%;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 20%;
+  position: relative;
+}
+
+.contentConfirmar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 20px;
+}
+
+.containerConfirmar i {
+  position: absolute;
+  top: 5%;
+  right: 3%;
+  font-size: 18px;
 }
