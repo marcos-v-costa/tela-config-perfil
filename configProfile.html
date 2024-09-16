@@ -13,6 +13,7 @@
 
   <body>
     <header class="top-area">
+      <!--
       <div id="icones-topo-esquerda">
         <span>LOGO</span>
       </div>
@@ -20,56 +21,83 @@
         <img src="/assets/logout.svg" id="saída" />
         <i class="bi bi-person-circle" id="foto-user"></i>
       </div>
+      -->
+      <h1>Configurações do Perfil</h1>
+      <nav class="sidebar">
+        <ul>
+          <li class="sidebar-item">
+            <img src="./assets/lupaQuester.svg" alt="" />
+          </li>
+          <li class="sidebar-item menu">
+            <img src="./assets/Play.svg" alt="" />
+          </li>
+          <li class="sidebar-item menu">
+            <img src="./assets/Add Square.svg" alt="" />
+          </li>
+          <li class="sidebar-item menu">
+            <img src="./assets/Grid.svg" alt="" />
+          </li>
+          <li class="sidebar-item menu">
+            <img src="./assets/Text Bullet List Square.svg" alt="" />
+          </li>
+          <li class="sidebar-item menu">
+            <img src="./assets/Document Copy.svg" alt="" />
+          </li>
+        </ul>
+        <ul>
+          <li class="user-option">
+            <img src="./assets/person-circle.svg" alt="" />
+          </li>
+          <li class="user-option">
+            <img src="./assets/Arrow Exit.svg" alt="" />
+          </li>
+        </ul>
+      </nav>
     </header>
     <section class="mid-area">
-      <div id="meio-um">
-        <div id="area-perfil">
-          <div id="texto-foto-perfil">
-            <p id="foto-perfil-descricao">
+      <div id="mid-one">
+        <div id="profile-area">
+          <div id="text-photo-profile">
+            <p id="photo-profile-description">
               Sua foto de perfil aparecerá em todas as partidas que<br />você
               participar.
             </p>
           </div>
-          <div class="area-circulo">
-            <div class="circulo-perfil">
+          <div class="circle-area">
+            <div class="profile-circle">
               <img src="/assets/photo_camera.svg" />
             </div>
-            
           </div>
 
-          <div id="texto-visualização">
-            <p id="texto-pre-visu">Pré-visualização da imagem de perfil.</p>
+          <div id="text-visualization">
+            <p id="text-pre-visu">Pré-visualização da imagem de perfil</p>
           </div>
         </div>
       </div>
-      <div id="meio-dois">
-        <div id="area-dados">
-          <div id="info-perfil">
-            <p id="texto-info">Configuração do Perfil</p>
+      <div id="mid-two">
+        <div id="data-area">
+          
+          <div id="info-profile">
+            <p id="text-info">Configuração do Perfil</p>
           </div>
           <div id="area-form">
-            <form id="dados-form">
+            <form id="data-form">
               <div class="input-box">
-                <label for="user" class="label-form">Apelido</label>
+                <label for="name" class="label-form">Nome</label>
+                <input type="text" id="name" name="name" class="caixa-form" />
+              </div>
+              <div class="input-box">
+                <label for="lastname" class="label-form">Sobrenome</label>
+                <input
+                  type="text"
+                  id="lastname"
+                  name="lastname"
+                  class="caixa-form"
+                />
+              </div>
+              <div class="input-box">
+                <label for="user" class="label-form">User</label>
                 <input type="text" id="user" class="user" name="surname" />
-              </div>
-              <div class="input-box">
-                <label for="nome" class="label-form">Nome</label>
-                <input
-                  type="text"
-                  id="sobrenome"
-                  name="sobrenome"
-                  class="caixa-form"
-                />
-              </div>
-              <div class="input-box">
-                <label for="nome" class="label-form">Sobrenome</label>
-                <input
-                  type="text"
-                  id="sobrenome"
-                  name="sobreome"
-                  class="caixa-form"
-                />
               </div>
               <div class="input-box">
                 <label for="email" class="label-form">Email</label>
@@ -89,16 +117,16 @@
                   name="password"
                   class="caixa-form"
                 />
-                <i class="bi bi-eye-fill" id="iconOlho"></i>
+                <i class="bi bi-eye-fill" id="iconEye"></i>
               </div>
             </form>
           </div>
-          <div id="area-excluir">
-            <button type="submit" class="botao-excluir">Excluir conta</button>
-            <div id="area-texto-excluir">
-              <p id="alerta-excluir">
+          <div id="delete-area">
+            <button type="submit" class="delete-button">Excluir conta</button>
+            <div id="delete-text-area">
+              <p id="delete-alert">
                 Uma vez excluída, sua conta será perdida
-                <span id="texto-perma">permanentemente</span> sem opção de
+                <span id="text-perm">permanentemente</span> sem opção de
                 recuperação.
               </p>
             </div>
@@ -107,27 +135,29 @@
         <!-- colocar coisas -->
       </div>
     </section>
+    
     <section class="bottom-area">
-      <button type="submit" class="botao-confirmar">Confirmar</button>
+     <button type="submit" class="confirm-button">Confirmar</button>
     </section>
+  
     <div class="modal">
       <div class="container">
         <div class="content">
           <p>
             Tem certeza que deseja excluir sua conta? Ela
-            <span id="text-nao">NÃO</span> poderá ser recuperada.
+            <span id="text-no">NÃO</span> poderá ser recuperada.
           </p>
         </div>
         <div class="buttons">
-          <button id="cancelar-button">Cancelar</button>
-          <button id="excluir-button">Excluir conta</button>
+          <button id="cancel-button">Cancelar</button>
+          <button id="deleteAccount-button">Excluir conta</button>
         </div>
       </div>
     </div>
-    <div class="modalConfirmar">
-      <div class="containerConfirmar">
+    <div class="modalConfirm">
+      <div class="containerConfirm">
         <i class="bi bi-x"></i>
-        <div class="contentConfirmar">
+        <div class="contentConfirm">
           <p>Informações salvas <br />com sucesso!</p>
         </div>
       </div>

@@ -28,7 +28,7 @@ body {
   padding: 10px;
   height: 15%;
 }
-
+/*
 #icones-topo-esquerda {
   display: flex;
   align-items: center;
@@ -64,6 +64,76 @@ body {
   cursor: pointer;
   color: #3a3a3a;
 }
+*/
+.top-area h1 {
+  font-family: "Sora";
+  font-weight: 700;
+  color: #909090;
+  font-size: 2.4rem;
+  margin-left: 19.5rem;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 5vw; /* Largura flexível */
+  min-width: 50px;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vh 0;
+  transition: width 0.3s ease;
+  border-radius: 0 10px 10px 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-item {
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s, padding-left 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.menu:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+  padding-left: 1.5em;
+  border-radius: 10px;
+}
+
+.menu::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background-color: transparent;
+  transition: background-color 0.3s, top 0.3s;
+}
+
+.menu:hover::before {
+  background-color: #00bfa6;
+}
+
+.user-option {
+  width: 100%;
+  padding: 0 1em;
+  margin: 1em auto;
+  cursor: pointer;
+}
 
 .mid-area {
   display: flex;
@@ -73,15 +143,7 @@ body {
   height: 70%;
 }
 
-#area-meio {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-}
-
-#meio-um {
+#mid-one {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,7 +153,7 @@ body {
   margin-right: 25rem;
 }
 
-#area-perfil {
+#profile-area {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,13 +163,13 @@ body {
   gap: 8px;
 }
 
-#texto-foto-perfil {
+#text-photo-profile {
   display: flex;
   text-align: center;
   width: 70%;
 }
 
-.area-circulo {
+.circle-area {
   display: flex;
   width: 100%;
   align-items: center;
@@ -115,7 +177,7 @@ body {
   position: relative;
 }
 
-.circulo-perfil {
+.profile-circle {
   float: left;
   width: 180px;
   height: 180px;
@@ -125,7 +187,7 @@ body {
   position: relative;
 }
 
-.circulo-perfil img {
+.profile-circle img {
   position: absolute;
   right: 10%;
   top: 80%;
@@ -136,20 +198,20 @@ body {
   border-radius: 50%;
 }
 
-#foto-perfil-descricao {
+#photo-profile-description {
   color: black;
   font-family: Sora;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 13px;
 }
 
-#texto-visualização {
+#text-visualization {
   display: flex;
   text-align: center;
   width: 50%;
 }
 
-#texto-pre-visu {
+#text-pre-visu {
   color: rgb(22, 22, 22);
   font-family: Sora;
   font-weight: 400;
@@ -157,7 +219,7 @@ body {
   font-style: italic;
 }
 
-#meio-dois {
+#mid-two {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -167,7 +229,7 @@ body {
   margin-right: 30px;
 }
 
-#area-dados {
+#data-area {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,13 +239,13 @@ body {
   gap: 6px;
 }
 
-#info-perfil {
+#info-profile {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#texto-info {
+#text-info {
   color: black;
   font-family: Sora;
   font-weight: 700;
@@ -198,7 +260,7 @@ body {
   width: 100%;
 }
 
-#dados-form {
+#data-form {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -247,7 +309,7 @@ body {
   color: rgb(22, 22, 22);
 }
 
-#area-excluir {
+#delete-area {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -256,25 +318,25 @@ body {
   width: 100%;
 }
 
-.botao-excluir {
+.delete-button {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: rgb(113, 113, 113);
   height: 80%;
   width: 32%;
-  border-radius: 1.2rem;
+  border-radius: 0.8rem;
   padding: 15px;
   cursor: pointer;
-  border: none;
+  border: 3px solid rgb(113, 113, 113);
   font-family: "Montserrat";
-  font-weight: 600;
-  color: white;
+  font-weight: 800;
+  color: rgb(113, 113, 113);
   font-size: 10px;
+  background-color: #d0d0d0;
 }
 
-#area-texto-excluir {
+#delete-text-area {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -282,14 +344,14 @@ body {
   width: 100%;
 }
 
-#alerta-excluir {
+#delete-alert {
   font-family: Sora;
   font-weight: 500;
   color: rgb(0, 0, 0);
   font-size: 10px;
 }
 
-#texto-perma {
+#text-perm {
   color: rgb(0, 0, 0);
   font-weight: bold;
 }
@@ -302,6 +364,7 @@ body {
   padding: 10px;
   height: 15%;
 }
+
 
 .bottom-area button {
   background-color: rgb(113, 113, 113);
@@ -317,6 +380,8 @@ body {
   text-align: center;
   color: white;
 }
+
+
 
 .modal {
   display: none;
@@ -361,12 +426,12 @@ body {
   height: 30%;
 }
 
-#cancelar-button {
+#cancel-button {
   background-color: #717171;
   border-bottom-left-radius: 10px;
 }
 
-#excluir-button {
+#deleteAccount-button {
   background-color: #a3a3a3;
   border-bottom-right-radius: 10px;
 }
@@ -380,13 +445,13 @@ body {
   font-size: 12px;
 }
 
-#text-nao {
+#text-no {
   font-family: Montserrat;
   font-size: 14px;
   font-weight: 700;
 }
 
-.modalConfirmar {
+.modalConfirm {
   display: none;
   position: fixed;
   z-index: 1;
@@ -398,7 +463,7 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.containerConfirmar {
+.containerConfirm {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -412,7 +477,7 @@ body {
   position: relative;
 }
 
-.contentConfirmar {
+.contentConfirm {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -424,7 +489,7 @@ body {
   padding: 20px;
 }
 
-.containerConfirmar i {
+.containerConfirm i {
   position: absolute;
   top: 5%;
   right: 3%;
