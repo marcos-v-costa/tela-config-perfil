@@ -19,18 +19,42 @@ function olhoSenha() {
   }
 }
 
-deleteButton.onclick = function () {
+deleteButton.onclick = () => {
   modalDelete.showModal();
 };
 
-cancelButton.onclick = function () {
+cancelButton.onclick = () => {
   modalDelete.close();
 };
 
-confirmButton.onclick = function () {
+confirmButton.onclick = () => {
   modalConfirm.showModal();
 };
 
-confirmModalButton.onclick = function () {
+confirmModalButton.onclick = () => {
   modalConfirm.close();
 };
+
+/*
+const getPhoto = async (idUSer) => {
+  try {
+    const response = await fetch(
+      `http://localhost:3000/profile-photo/${idUSer}`,
+      {
+        headers: { "Content-Type": "multipart/form-data" },
+      }
+    );
+    if (response.ok) {
+      const blob = await response.blob();
+      const imgURL = URL.createObjectURL(blob);
+      const imgElement = document.getElementById("teste");
+      imgElement.src = imgURL;
+      return imgURL;
+    } else {
+      console.error("Erro ao enviar o arquivo:", response.statusText);
+    }
+  } catch (error) {
+    console.error("Erro na requisição:", error);
+  }
+};
+*/
