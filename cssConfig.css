@@ -8,9 +8,12 @@
 
 html,
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   height: 100vh;
   width: 100vw;
-  background-color: #d0d0d0;
 }
 
 html {
@@ -21,64 +24,8 @@ body {
   font-size: 1.6rem;
 }
 
-.top-area {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  height: 15%;
-}
-/*
-#icones-topo-esquerda {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: center;
-  background-color: rgb(113, 113, 113);
-  height: 80%;
-  width: 20%;
-  text-align: center;
-  font-family: "Sora";
-  color: white;
-  margin-left: 3rem;
-}
-
-#icones-topo-direita {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  gap: 1.8rem;
-  margin-right: 3rem;
-}
-
-#saída {
-  font-size: 3.5rem;
-  cursor: pointer;
-  color: #3a3a3a;
-}
-
-#foto-user {
-  font-size: 3.5rem;
-  height: 3.6rem;
-  cursor: pointer;
-  color: #3a3a3a;
-}
-*/
-.top-area h1 {
-  font-family: "Sora";
-  font-weight: 700;
-  color: #909090;
-  font-size: 2.4rem;
-  margin-left: 19.5rem;
-}
-
 .sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 5vw; /* Largura flexível */
-  min-width: 50px;
+  width: 5vw;
   height: 100%;
   background-color: white;
   display: flex;
@@ -135,12 +82,72 @@ body {
   cursor: pointer;
 }
 
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  color: #333;
+  height: 100%;
+  background-color: #d0d0d0;
+}
+
+.content header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 9%;
+  margin-bottom: 25px;
+  width: 80%;
+}
+
+.header-text {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content header h2 {
+  min-width: 50%;
+  font-family: "Sora";
+  color: #909090;
+}
+
+.results {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 40%;
+}
+
+.section-list {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.section-list::-webkit-scrollbar {
+  width: 10px;
+}
+
+.section-list::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 30px;
+}
+
+.section-list::-webkit-scrollbar-thumb {
+  background: #404040;
+  border-radius: 30px;
+}
+
 .mid-area {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
-  height: 70%;
+  height: 80%;
 }
 
 #mid-one {
@@ -150,7 +157,7 @@ body {
   flex-direction: column;
   height: 100%;
   width: 30%;
-  margin-right: 25rem;
+  margin-right: 32rem;
 }
 
 #profile-area {
@@ -166,7 +173,7 @@ body {
 #text-photo-profile {
   display: flex;
   text-align: center;
-  width: 70%;
+  width: 80%;
 }
 
 .circle-area {
@@ -178,16 +185,10 @@ body {
 }
 
 .profile-circle {
-  float: left;
-  width: 180px;
-  height: 180px;
-  shape-outside: circle();
-  clip-path: circle();
-  background: rgb(255, 255, 255);
   position: relative;
 }
 
-.profile-circle img {
+#camera-change {
   position: absolute;
   right: 10%;
   top: 80%;
@@ -208,7 +209,7 @@ body {
 #text-visualization {
   display: flex;
   text-align: center;
-  width: 50%;
+  width: 60%;
 }
 
 #text-pre-visu {
@@ -217,6 +218,42 @@ body {
   font-weight: 400;
   font-size: 14px;
   font-style: italic;
+}
+
+.logout-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logout-button button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 14px;
+  background-color: rgb(113, 113, 113);
+  height: 80%;
+  width: 15rem;
+  border-radius: 0.5rem;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-weight: 600;
+  text-align: center;
+  font-size: 17px;
+  color: white;
+}
+
+.logout-button button:hover {
+  box-shadow: 0px 5px 4px 0 rgba(0, 0, 0, 0.225);
+  transition: box-shadow 0.2s;
+}
+
+.logout-button img {
+  height: 100%;
 }
 
 #mid-two {
@@ -231,12 +268,12 @@ body {
 
 #data-area {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 100%;
   width: 100%;
   gap: 6px;
+  margin-top: 25px;
 }
 
 #info-profile {
@@ -336,6 +373,11 @@ body {
   background-color: #d0d0d0;
 }
 
+.delete-button:hover {
+  box-shadow: 0px 5px 4px 0 rgba(0, 0, 0, 0.225);
+  transition: box-shadow 0.2s;
+}
+
 #delete-text-area {
   display: flex;
   justify-content: center;
@@ -356,24 +398,13 @@ body {
   font-weight: bold;
 }
 
-.bottom-area {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 10px;
-  height: 15%;
-}
-
-
-.bottom-area button {
+.confirm-button {
   background-color: rgb(113, 113, 113);
-  height: 75%;
-  width: 15%;
-  border-radius: 30px;
-  padding: 10px;
+  height: 70%;
+  width: 15rem;
+  border-radius: 0.8rem;
+  padding: 10px 25px 10px 25px;
   border: none;
-  box-shadow: 0px 5px 4px 0 rgba(0, 0, 0, 0.225);
   cursor: pointer;
   font-family: "Montserrat";
   font-weight: 600;
@@ -381,68 +412,36 @@ body {
   color: white;
 }
 
+.confirm-button:hover {
+  box-shadow: 0px 5px 4px 0 rgba(0, 0, 0, 0.225);
+  transition: box-shadow 0.2s;
+}
 
-
-.modal {
-  display: none;
+.modal-delete {
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: rgb(253, 253, 253);
   width: 20%;
   height: 25%;
+  margin-top: 250px;
+  margin-left: 520px;
+  overflow: hidden;
+  border: none;
   border-radius: 10px;
-  margin: 0 auto;
-  margin-top: 15%;
 }
 
-.content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 75%;
-  padding: 20px;
-  text-align: center;
+.content-modal {
   font-family: Montserrat;
   font-size: 14px;
   font-weight: 600;
-}
-
-.buttons {
+  padding: 20px;
+  color: #333;
+  height: 70%;
+  background-color: #d0d0d0;
   display: flex;
-  width: 100%;
-  height: 30%;
-}
-
-#cancel-button {
-  background-color: #717171;
-  border-bottom-left-radius: 10px;
-}
-
-#deleteAccount-button {
-  background-color: #a3a3a3;
-  border-bottom-right-radius: 10px;
-}
-
-.buttons button {
-  border: none;
-  width: 50%;
-  color: white;
-  font-family: Montserrat;
-  font-weight: 600;
-  font-size: 12px;
+  align-items: center;
+  text-align: center;
 }
 
 #text-no {
@@ -451,47 +450,90 @@ body {
   font-weight: 700;
 }
 
-.modalConfirm {
-  display: none;
+.buttons {
+  display: flex;
+  width: 100%;
+  height: 30%;
+}
+
+.modal-delete-area button {
+  border: none;
+  width: 50%;
+  color: white;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.5);
+}
+
+#cancel-button {
+  background-color: #717171;
+  border-bottom-left-radius: 10px;
+  cursor: pointer;
+}
+
+#deleteAccount-button {
+  background-color: #a3a3a3;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+}
+
+.modal-confirm {
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.containerConfirm {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: rgb(253, 253, 253);
   width: 20%;
-  height: 20%;
+  height: 25%;
+  margin-top: 250px;
+  margin-left: 520px;
+  overflow: hidden;
+  border: none;
   border-radius: 10px;
-  margin: 0 auto;
-  margin-top: 20%;
-  position: relative;
 }
 
-.contentConfirm {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  text-align: center;
+.content-modal-confirm {
   font-family: Montserrat;
   font-size: 18px;
   font-weight: 600;
-  padding: 20px;
+  color: #333;
+  height: 70%;
+  width: 100%;
+  background-color: #d0d0d0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.buttons-confirm {
+  display: flex;
+  width: 100%;
+  height: 30%;
+}
+
+.modal-confirm-area button {
+  border: none;
+  width: 100%;
+  color: white;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+#confirm-modal-button {
+  background-color: #717171;
+  border-bottom-left-radius: 10px;
+  cursor: pointer;
 }
 
 .containerConfirm i {
   position: absolute;
-  top: 5%;
-  right: 3%;
+  top: 20%;
+  right: 10%;
   font-size: 18px;
 }
